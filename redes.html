@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="pt-br" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Certificações de Redes - LAS - Smart Automation Solutions</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .header-shadow {
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+        }
+        .nav-link.active {
+            color: #06b6d4; /* Cor ciano do Tailwind */
+            font-weight: 500;
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800">
+
+    <!-- ===== Cabeçalho ===== -->
+    <header id="header" class="bg-white sticky top-0 left-0 right-0 z-50 header-shadow">
+        <div class="container mx-auto px-6 md:px-16 flex justify-between items-center h-24">
+            <!-- Logo -->
+            <a href="index.html">
+                <img src="https://static.wixstatic.com/media/803398_d45558968a444905b1839a8221295489.png/v1/fill/w_240,h_81,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/803398_d45558968a444905b1839a8221295489.png" alt="Logo da Empresa" class="h-12">
+            </a>
+
+            <!-- Navegação Desktop -->
+            <nav class="hidden md:flex items-center space-x-8">
+                <a href="index.html" class="nav-link text-gray-600 hover:text-cyan-500 transition">Home</a>
+                <a href="quem-somos.html" class="nav-link text-gray-600 hover:text-cyan-500 transition">Quem somos</a>
+                <a href="servicos.html" class="nav-link text-gray-600 hover:text-cyan-500 transition">Serviços</a>
+                <a href="contato.html" class="nav-link text-gray-600 hover:text-cyan-500 transition">Contato</a>
+            </nav>
+
+            <!-- Botão Mobile -->
+            <button id="mobile-btn" class="md:hidden">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+            </button>
+        </div>
+        <!-- Menu Mobile -->
+        <div id="mobile-menu" class="hidden md:hidden px-6 pb-4">
+            <a href="index.html" class="block py-2 text-gray-600">Home</a>
+            <a href="quem-somos.html" class="block py-2 text-gray-600">Quem somos</a>
+            <a href="servicos.html" class="block py-2 text-gray-600">Serviços</a>
+            <a href="contato.html" class="block py-2 text-gray-600">Contato</a>
+        </div>
+    </header>
+
+    <main>
+        <!-- ===== Título da Página ===== -->
+        <section class="bg-[#002b3e] py-12">
+            <div class="container mx-auto px-6 text-center">
+                <h1 class="text-3xl md:text-4xl font-bold text-white uppercase tracking-widest">Certificações de Redes</h1>
+            </div>
+        </section>
+
+        <!-- ===== Conteúdo Principal Redes ===== -->
+        <section class="py-20 bg-white">
+            <div class="container mx-auto px-6 flex flex-wrap md:flex-nowrap items-center gap-8 md:gap-16">
+                <!-- Coluna da Imagem -->
+                <div class="w-full md:w-1/2">
+                    <img src="https://placehold.co/600x600/e2e8f0/334155?text=Imagem+Redes" alt="Certificação de Redes" class="rounded-lg shadow-xl w-full h-full object-cover">
+                </div>
+                <!-- Coluna de Texto -->
+                <div class="w-full md:w-1/2 text-gray-600">
+                    <h2 class="text-3xl font-bold text-gray-800 mb-4">Certificação de Redes com a LAS - Conectividade Sem Limites!</h2>
+                    <p class="mb-6">
+                        Na LAS, a certificação de redes vai além, abrangendo todos os protocolos essenciais para garantir a máxima eficiência em sua automação industrial. Confira nossos serviços especializados que elevam sua conectividade a novos patamares.
+                    </p>
+                    <ul class="space-y-4">
+                        <li>
+                            <h3 class="font-bold text-gray-800">• Domínio Completo dos Principais Protocolos:</h3>
+                            <p>Nossos colaboradores dominam os principais protocolos de redes, como Profibus, TCP/IP, Profinet, e outros não menos importantes, assegurando que sua rede esteja preparada para qualquer desafio.</p>
+                        </li>
+                        <li>
+                            <h3 class="font-bold text-gray-800">• Assistência Técnica em Instrumentação Industrial:</h3>
+                            <p>Expertise que Você Pode Confiar! Oferecemos testes de funcionalidade abrangentes e simulação de condições para garantir um desempenho impecável.</p>
+                        </li>
+                        <li>
+                            <h3 class="font-bold text-gray-800">• Padrões IEC61850:</h3>
+                            <p>Garantia de Conformidade Global!</p>
+                        </li>
+                        <li>
+                            <h3 class="font-bold text-gray-800">• Suporte Técnico Especializado em Redes Industriais:</h3>
+                            <p>Oferecemos um suporte técnico especializado e monitoramento contínuo para garantir que sua rede esteja sempre otimizada, atualizada e pronta para enfrentar os desafios da automação industrial.</p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== Galeria ===== -->
+        <section class="py-20 bg-gray-100">
+            <div class="container mx-auto px-6 text-center">
+                <h2 class="text-2xl font-semibold text-gray-700 mb-8">Confira algumas fotos dos trabalhos realizados em nossos clientes.</h2>
+                <div class="max-w-4xl mx-auto">
+                    <img src="https://placehold.co/1200x600/003a4e/ffffff?text=Galeria+de+Trabalhos" alt="Foto de um trabalho realizado" class="rounded-lg shadow-lg w-full">
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- ===== Rodapé ===== -->
+    <footer class="bg-[#002b3e] text-white py-12">
+        <div class="container mx-auto px-6 text-center">
+            <nav class="flex justify-center space-x-6 mb-8">
+                <a href="index.html" class="hover:text-cyan-400 transition">Home</a>
+                <a href="quem-somos.html" class="hover:text-cyan-400 transition">Quem somos</a>
+                <a href="servicos.html" class="hover:text-cyan-400 transition">Serviços</a>
+                <a href="contato.html" class="hover:text-cyan-400 transition">Contato</a>
+            </nav>
+            <div class="mb-8">
+                <a href="https://www.instagram.com" target="_blank" class="inline-block">
+                    <svg class="w-7 h-7" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M12.315 2c2.43 0 2.784.013 3.808.06 1.064.049 1.791.218 2.427.465a4.902 4.902 0 012.153 2.153c.247.636.416 1.363.465 2.427.048 1.024.06 1.378.06 3.808s-.012 2.784-.06 3.808c-.049 1.064-.218 1.791-.465 2.427a4.902 4.902 0 01-2.153 2.153c-.636.247-1.363.416-2.427.465-1.024.048-1.378.06-3.808.06s-2.784-.013-3.808-.06c-1.064-.049-1.791-.218-2.427-.465a4.902 4.902 0 01-2.153-2.153c-.247-.636-.416-1.363-.465-2.427-.048-1.024-.06-1.378-.06-3.808s.012-2.784.06-3.808c.049-1.064.218-1.791.465-2.427a4.902 4.902 0 012.153-2.153c.636-.247 1.363-.416 2.427.465C9.53 2.013 9.884 2 12.315 2zM12 8.118c-2.136 0-3.872 1.736-3.872 3.872s1.736 3.872 3.872 3.872 3.872-1.736 3.872-3.872S14.136 8.118 12 8.118zM12 14.354c-1.29 0-2.336-.99-2.336-2.22s1.046-2.336 2.336-2.336 2.336 1.046 2.336 2.336c0 1.23-.99 2.22-2.336 2.22zM16.838 7.846a1.24 1.24 0 100-2.48 1.24 1.24 0 000 2.48z" clip-rule="evenodd" /></svg>
+                </a>
+            </div>
+            <div class="text-gray-400 text-sm space-y-2">
+                <a href="mailto:gerente@lasautomation.com.br" class="block hover:text-cyan-400">gerente@lasautomation.com.br</a>
+                <p>Atendimento online</p>
+                <a href="tel:+5566996947944" class="block hover:text-cyan-400">+55 (66) 9.9694-7944</a>
+            </div>
+            <p class="text-gray-500 text-xs mt-8">COPYRIGHT © 2024</p>
+        </div>
+    </footer>
+
+    <script>
+        // Lógica para o menu mobile e para marcar o link ativo
+        const mobileBtn = document.getElementById('mobile-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        mobileBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Marca o link da página atual como ativo
+        document.addEventListener('DOMContentLoaded', () => {
+            const links = document.querySelectorAll('.nav-link');
+            const currentPath = window.location.pathname.split('/').pop();
+            
+            links.forEach(link => {
+                const linkPath = link.getAttribute('href').split('/').pop().split('#')[0];
+                if (linkPath === currentPath) {
+                    link.classList.add('active');
+                }
+            });
+        });
+    </script>
+</body>
+</html>

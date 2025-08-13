@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="pt-br" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contato - LAS - Smart Automation Solutions</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .header-shadow {
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+        }
+        .nav-link.active {
+            color: #06b6d4; /* Cor ciano do Tailwind */
+            font-weight: 500;
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800">
+
+    <!-- ===== Cabeçalho ===== -->
+    <header id="header" class="bg-white sticky top-0 left-0 right-0 z-50 header-shadow">
+        <div class="container mx-auto px-6 md:px-16 flex justify-between items-center h-24">
+            <!-- Logo -->
+            <a href="index.html">
+                <img src="https://static.wixstatic.com/media/803398_d45558968a444905b1839a8221295489.png/v1/fill/w_240,h_81,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/803398_d45558968a444905b1839a8221295489.png" alt="Logo da Empresa" class="h-12">
+            </a>
+
+            <!-- Navegação Desktop -->
+            <nav class="hidden md:flex items-center space-x-8">
+                <a href="index.html" class="nav-link text-gray-600 hover:text-cyan-500 transition">Home</a>
+                <a href="quem-somos.html" class="nav-link text-gray-600 hover:text-cyan-500 transition">Quem somos</a>
+                <a href="servicos.html" class="nav-link text-gray-600 hover:text-cyan-500 transition">Serviços</a>
+                <a href="contato.html" class="nav-link text-gray-600 hover:text-cyan-500 transition">Contato</a>
+            </nav>
+
+            <!-- Botão Mobile -->
+            <button id="mobile-btn" class="md:hidden">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+            </button>
+        </div>
+        <!-- Menu Mobile -->
+        <div id="mobile-menu" class="hidden md:hidden px-6 pb-4">
+            <a href="index.html" class="block py-2 text-gray-600">Home</a>
+            <a href="quem-somos.html" class="block py-2 text-gray-600">Quem somos</a>
+            <a href="servicos.html" class="block py-2 text-gray-600">Serviços</a>
+            <a href="contato.html" class="block py-2 text-gray-600">Contato</a>
+        </div>
+    </header>
+
+    <main>
+        <!-- ===== Secção de Contato ===== -->
+        <section id="contato" class="py-20 bg-white">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl md:text-4xl font-bold text-gray-800 uppercase tracking-widest">Contato</h2>
+                </div>
+                <div class="max-w-4xl mx-auto text-center">
+                    <h3 class="text-2xl font-bold text-cyan-600 mb-4">Dúvidas ou consultas?</h3>
+                    <p class="text-gray-600 mb-2">Complete o formulário e um dos nossos colaboradores entrará em contato!</p>
+                    <p class="text-gray-600 mb-12">
+                        Email: <a href="mailto:gerente@lasautomation.com.br" class="hover:text-cyan-500">gerente@lasautomation.com.br</a> | Telefone: <a href="tel:+5566996947944" class="hover:text-cyan-500">+55 (66) 9.9694-7944</a>
+                    </p>
+                    <form class="text-left">
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+                            <input type="text" placeholder="Nome" class="w-full p-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-cyan-500">
+                            <input type="email" placeholder="E-mail" class="w-full p-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-cyan-500">
+                            <input type="tel" placeholder="Telefone" class="w-full p-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-cyan-500">
+                            <input type="text" placeholder="Assunto" class="w-full p-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-cyan-500">
+                        </div>
+                        <textarea placeholder="Mensagem" rows="6" class="w-full p-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-cyan-500 mb-6"></textarea>
+                        <div class="text-center">
+                            <button type="submit" class="bg-cyan-500 text-white font-bold py-3 px-12 rounded-lg hover:bg-cyan-600 transition">Enviar</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- ===== Rodapé ===== -->
+    <footer class="bg-[#002b3e] text-white py-12">
+        <div class="container mx-auto px-6 text-center">
+            <nav class="flex justify-center space-x-6 mb-8">
+                <a href="index.html" class="hover:text-cyan-400 transition">Home</a>
+                <a href="quem-somos.html" class="hover:text-cyan-400 transition">Quem somos</a>
+                <a href="servicos.html" class="hover:text-cyan-400 transition">Serviços</a>
+                <a href="contato.html" class="hover:text-cyan-400 transition">Contato</a>
+            </nav>
+            <div class="mb-8">
+                <a href="https://www.instagram.com" target="_blank" class="inline-block">
+                    <svg class="w-7 h-7" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M12.315 2c2.43 0 2.784.013 3.808.06 1.064.049 1.791.218 2.427.465a4.902 4.902 0 012.153 2.153c.247.636.416 1.363.465 2.427.048 1.024.06 1.378.06 3.808s-.012 2.784-.06 3.808c-.049 1.064-.218 1.791-.465 2.427a4.902 4.902 0 01-2.153 2.153c-.636.247-1.363.416-2.427.465-1.024.048-1.378.06-3.808.06s-2.784-.013-3.808-.06c-1.064-.049-1.791-.218-2.427-.465a4.902 4.902 0 01-2.153-2.153c-.247-.636-.416-1.363-.465-2.427-.048-1.024-.06-1.378-.06-3.808s.012-2.784.06-3.808c.049-1.064.218-1.791.465-2.427a4.902 4.902 0 012.153-2.153c.636-.247 1.363-.416 2.427.465C9.53 2.013 9.884 2 12.315 2zM12 8.118c-2.136 0-3.872 1.736-3.872 3.872s1.736 3.872 3.872 3.872 3.872-1.736 3.872-3.872S14.136 8.118 12 8.118zM12 14.354c-1.29 0-2.336-.99-2.336-2.22s1.046-2.336 2.336-2.336 2.336 1.046 2.336 2.336c0 1.23-.99 2.22-2.336 2.22zM16.838 7.846a1.24 1.24 0 100-2.48 1.24 1.24 0 000 2.48z" clip-rule="evenodd" /></svg>
+                </a>
+            </div>
+            <div class="text-gray-400 text-sm space-y-2">
+                <a href="mailto:gerente@lasautomation.com.br" class="block hover:text-cyan-400">gerente@lasautomation.com.br</a>
+                <p>Atendimento online</p>
+                <a href="tel:+5566996947944" class="block hover:text-cyan-400">+55 (66) 9.9694-7944</a>
+            </div>
+            <p class="text-gray-500 text-xs mt-8">COPYRIGHT © 2024</p>
+        </div>
+    </footer>
+
+    <script>
+        // Lógica para o menu mobile e para marcar o link ativo
+        const mobileBtn = document.getElementById('mobile-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        mobileBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Marca o link da página atual como ativo
+        document.addEventListener('DOMContentLoaded', () => {
+            const links = document.querySelectorAll('.nav-link');
+            const currentPath = window.location.pathname.split('/').pop();
+            
+            links.forEach(link => {
+                const linkPath = link.getAttribute('href').split('/').pop().split('#')[0];
+                if (linkPath === currentPath) {
+                    link.classList.add('active');
+                }
+            });
+        });
+    </script>
+</body>
+</html>
