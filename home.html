@@ -85,15 +85,15 @@
 
     <main class="pt-24">
         <!-- ===== Secção Home (Banner) ===== -->
-        <section id="home" class="relative h-[calc(100vh-112px)]">
+        <section id="home" class="relative h-[595px]">
             <img src="img/banner.png" alt="banner">
         </section>
 
         <!-- ===== Secção "Quem Somos" ===== -->
-        <section id="quem-somos" class="py-20 bg-white">
+        <section id="quem-somos-intro" class="py-16 bg-white">
             <div class="container mx-auto px-6 text-center">
-                <h2 class="text-3xl font-bold text-gray-800 mb-4">Somos referência em automação industrial e serviços elétricos</h2>
-                <p class="max-w-3xl mx-auto text-gray-600">Modernize seus processos com nossas soluções de automação industrial. Serviços inovadores e eficientes para atender às demandas do mercado. Conte conosco.</p>
+                <h2 class="text-3xl font-bold text-cyan-600 mb-4">Somos referência em automação industrial e serviços elétricos</h2>
+                <p class="max-w-3xl mx-auto text-gray-500 text-lg">Modernize seus processos com nossas soluções de automação industrial. Serviços inovadores e eficientes para atender às demandas do mercado. Conte conosco.</p>
             </div>
         </section>
 
@@ -103,29 +103,64 @@
                 <h2 class="text-3xl font-bold text-white mb-12">Serviços</h2>
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                     <!-- Card de Serviço -->
-                    <div class="bg-white rounded-lg shadow-lg p-8 text-left">
-                        <h3 class="text-xl font-bold text-gray-800 mb-3">Controle Total com CLPs de Última Geração!</h3>
-                        <p class="text-gray-600">Desenvolvimento e implementação de sistemas de controle com CLPs de ponta.</p>
+                                       <!-- Card de Serviço 1: CLP -->
+                    <div class="bg-white rounded-lg shadow-lg overflow-hidden flex flex-col">
+                        <img src="https://placehold.co/400x250/e2e8f0/334155?text=CLP" alt="Imagem do serviço de CLPs" class="w-full h-48 object-cover">
+                        <div class="p-6 flex flex-col flex-grow">
+                            <h3 class="text-xl font-bold text-gray-800 mb-3">Controle Total com CLPs de Última Geração!</h3>
+                            <p class="text-gray-600 mb-4 flex-grow">Desenvolvimento e implementação de sistemas de controle com CLPs de ponta.</p>
+                            <a href="clp.html" class="mt-auto self-center bg-cyan-500 text-white font-bold py-2 px-6 rounded-lg hover:bg-cyan-600 transition">Saiba mais</a>
+                        </div>
                     </div>
-                    <div class="bg-white rounded-lg shadow-lg p-8 text-left">
-                        <h3 class="text-xl font-bold text-gray-800 mb-3">Sistemas SCADA: Visualize, Controle, Cresça!</h3>
-                        <p class="text-gray-600">Implementação de sistemas SCADA para monitoramento e controle de processos.</p>
+
+                    <!-- Card de Serviço 2: SCADA -->
+                    <div class="bg-white rounded-lg shadow-lg overflow-hidden flex flex-col">
+                        <img src="https://placehold.co/400x250/e2e8f0/334155?text=SCADA" alt="Imagem do serviço de Sistemas SCADA" class="w-full h-48 object-cover">
+                        <div class="p-6 flex flex-col flex-grow">
+                            <h3 class="text-xl font-bold text-gray-800 mb-3">Sistemas SCADA: Visualize, Controle, Cresça!</h3>
+                            <p class="text-gray-600 mb-4 flex-grow">Implementação de sistemas SCADA para monitoramento e controle de processos.</p>
+                            <a href="scada.html" class="mt-auto self-center bg-cyan-500 text-white font-bold py-2 px-6 rounded-lg hover:bg-cyan-600 transition">Saiba mais</a>
+                        </div>
                     </div>
-                    <div class="bg-white rounded-lg shadow-lg p-8 text-left">
-                        <h3 class="text-xl font-bold text-gray-800 mb-3">Certificação de redes: Conectividade sem limites</h3>
-                        <p class="text-gray-600">Análise e certificação de redes industriais para garantir a máxima performance.</p>
+
+                    <!-- Card de Serviço 3: Redes -->
+                    <div class="bg-white rounded-lg shadow-lg overflow-hidden flex flex-col">
+                        <img src="https://placehold.co/400x250/e2e8f0/334155?text=Redes" alt="Imagem do serviço de Certificação de Redes" class="w-full h-48 object-cover">
+                        <div class="p-6 flex flex-col flex-grow">
+                            <h3 class="text-xl font-bold text-gray-800 mb-3">Certificação de redes: Conectividade sem limites</h3>
+                            <p class="text-gray-600 mb-4 flex-grow">Análise e certificação de redes industriais para garantir a máxima performance.</p>
+                            <a href="redes.html" class="mt-auto self-center bg-cyan-500 text-white font-bold py-2 px-6 rounded-lg hover:bg-cyan-600 transition">Saiba mais</a>
+                        </div>
                     </div>
-                    <div class="bg-white rounded-lg shadow-lg p-8 text-left">
-                        <h3 class="text-xl font-bold text-gray-800 mb-3">SPDA - Sistema de Proteção contra Descargas Atmosféricas</h3>
-                        <p class="text-gray-600">Instalação e manutenção de sistemas de proteção contra descargas atmosféricas.</p>
+
+                    <!-- Card de Serviço 4: SPDA -->
+                    <div class="bg-white rounded-lg shadow-lg overflow-hidden flex flex-col">
+                        <img src="https://placehold.co/400x250/e2e8f0/334155?text=SPDA" alt="Imagem do serviço de SPDA" class="w-full h-48 object-cover">
+                        <div class="p-6 flex flex-col flex-grow">
+                            <h3 class="text-xl font-bold text-gray-800 mb-3">SPDA - Sistema de Proteção contra Descargas Atmosféricas</h3>
+                            <p class="text-gray-600 mb-4 flex-grow">Instalação e manutenção de sistemas de proteção contra descargas atmosféricas.</p>
+                            <a href="spda.html" class="mt-auto self-center bg-cyan-500 text-white font-bold py-2 px-6 rounded-lg hover:bg-cyan-600 transition">Saiba mais</a>
+                        </div>
                     </div>
-                    <div class="bg-white rounded-lg shadow-lg p-8 text-left">
-                        <h3 class="text-xl font-bold text-gray-800 mb-3">Soluções elétricas sob medida.</h3>
-                        <p class="text-gray-600">Projetos e montagens de painéis elétricos e soluções de automação.</p>
+
+                    <!-- Card de Serviço 5: Elétrica -->
+                    <div class="bg-white rounded-lg shadow-lg overflow-hidden flex flex-col">
+                        <img src="https://placehold.co/400x250/e2e8f0/334155?text=Elétrica" alt="Imagem do serviço de Soluções Elétricas" class="w-full h-48 object-cover">
+                        <div class="p-6 flex flex-col flex-grow">
+                            <h3 class="text-xl font-bold text-gray-800 mb-3">Soluções elétricas sob medida.</h3>
+                            <p class="text-gray-600 mb-4 flex-grow">Projetos e montagens de painéis elétricos e soluções de automação.</p>
+                            <a href="eletrica.html" class="mt-auto self-center bg-cyan-500 text-white font-bold py-2 px-6 rounded-lg hover:bg-cyan-600 transition">Saiba mais</a>
+                        </div>
                     </div>
-                    <div class="bg-white rounded-lg shadow-lg p-8 text-left">
-                        <h3 class="text-xl font-bold text-gray-800 mb-3">Service-Repair: Inversores, Soft-starter e componentes</h3>
-                        <p class="text-gray-600">Manutenção e reparo de inversores, soft-starters e outros componentes eletrônicos.</p>
+
+                    <!-- Card de Serviço 6: Repair -->
+                    <div class="bg-white rounded-lg shadow-lg overflow-hidden flex flex-col">
+                        <img src="https://placehold.co/400x250/e2e8f0/334155?text=Repair" alt="Imagem do serviço de Service-Repair" class="w-full h-48 object-cover">
+                        <div class="p-6 flex flex-col flex-grow">
+                            <h3 class="text-xl font-bold text-gray-800 mb-3">Service-Repair: Inversores, Soft-starter e componentes</h3>
+                            <p class="text-gray-600 mb-4 flex-grow">Manutenção e reparo de inversores, soft-starters e outros componentes eletrônicos.</p>
+                            <a href="repair.html" class="mt-auto self-center bg-cyan-500 text-white font-bold py-2 px-6 rounded-lg hover:bg-cyan-600 transition">Saiba mais</a>
+                        </div>
                     </div>
                 </div>
             </div>
