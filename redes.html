@@ -8,6 +8,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
     <style>
         body {
             font-family: 'Inter', sans-serif;
@@ -19,24 +20,49 @@
             color: #06b6d4; /* Cor ciano do Tailwind */
             font-weight: 500;
         }
+                        /* Estilos para as setas do carrossel */
+        .swiper-button-next, .swiper-button-prev {
+            color: white;
+            background-color: rgba(0, 0, 0, 0.3);
+            width: 44px;
+            height: 44px;
+            border-radius: 100%;
+        }
+        .swiper-button-next:after, .swiper-button-prev:after {
+            font-size: 20px;
+        }
     </style>
 </head>
 <body class="bg-gray-50 text-gray-800">
 
     <!-- ===== Cabeçalho ===== -->
-    <header id="header" class="bg-white sticky top-0 left-0 right-0 z-50 header-shadow">
+    <header id="header" class="bg-white fixed top-0 left-0 right-0 z-50 header-shadow">
         <div class="container mx-auto px-6 md:px-16 flex justify-between items-center h-24">
             <!-- Logo -->
-            <a href="index.html">
-                <img src="https://static.wixstatic.com/media/803398_d45558968a444905b1839a8221295489.png/v1/fill/w_240,h_81,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/803398_d45558968a444905b1839a8221295489.png" alt="Logo da Empresa" class="h-12">
+            <a href="home.html">
+                <img src="img/LasLogo.png" alt="Logo da Empresa" class="h-18">
             </a>
 
             <!-- Navegação Desktop -->
             <nav class="hidden md:flex items-center space-x-8">
-                <a href="index.html" class="nav-link text-gray-600 hover:text-cyan-500 transition">Home</a>
-                <a href="quem-somos.html" class="nav-link text-gray-600 hover:text-cyan-500 transition">Quem somos</a>
-                <a href="servicos.html" class="nav-link text-gray-600 hover:text-cyan-500 transition">Serviços</a>
-                <a href="contato.html" class="nav-link text-gray-600 hover:text-cyan-500 transition">Contato</a>
+                <a href="home.html" class="text-gray-600 hover:text-cyan-500 transition">Home</a>
+                <a href="quem-somos.html" class="text-gray-600 hover:text-cyan-500 transition">Quem somos</a>
+                <div class="relative">
+                    <button id="services-btn" class="text-gray-600 hover:text-cyan-500 transition flex items-center">
+                        Serviços
+                        <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                    </button>
+                    <!-- Menu Dropdown -->
+                    <div id="services-dropdown" class="dropdown-menu absolute hidden bg-white rounded-lg shadow-xl mt-4 py-2 w-60 border border-gray-100">
+                        <a href="clp.html" class="block px-4 py-2 text-gray-700 hover:bg-cyan-50 hover:text-cyan-600">CLP's</a>
+                        <a href="scada.html" class="block px-4 py-2 text-gray-700 hover:bg-cyan-50 hover:text-cyan-600">Sistemas SCADAs</a>
+                        <a href="redes.html" class="block px-4 py-2 text-gray-700 hover:bg-cyan-50 hover:text-cyan-600">Certificações de Redes</a>
+                        <a href="spda.html" class="block px-4 py-2 text-gray-700 hover:bg-cyan-50 hover:text-cyan-600">SPDA</a>
+                        <a href="eletrica.html" class="block px-4 py-2 text-gray-700 hover:bg-cyan-50 hover:text-cyan-600">Soluções Elétricas</a>
+                        <a href="repair.html" class="block px-4 py-2 text-gray-700 hover:bg-cyan-50 hover:text-cyan-600">Service-Repair</a>
+                    </div>
+                </div>
+                <a href="contato.html" class="text-gray-600 hover:text-cyan-500 transition">Contato</a>
             </nav>
 
             <!-- Botão Mobile -->
@@ -46,14 +72,14 @@
         </div>
         <!-- Menu Mobile -->
         <div id="mobile-menu" class="hidden md:hidden px-6 pb-4">
-            <a href="index.html" class="block py-2 text-gray-600">Home</a>
-            <a href="quem-somos.html" class="block py-2 text-gray-600">Quem somos</a>
-            <a href="servicos.html" class="block py-2 text-gray-600">Serviços</a>
-            <a href="contato.html" class="block py-2 text-gray-600">Contato</a>
+            <a href="#home" class="block py-2 text-gray-600">Home</a>
+            <a href="#quem-somos" class="block py-2 text-gray-600">Quem somos</a>
+            <a href="#servicos" class="block py-2 text-gray-600">Serviços</a>
+            <a href="#contato" class="block py-2 text-gray-600">Contato</a>
         </div>
     </header>
 
-    <main>
+    <main class="pt-24">
         <!-- ===== Título da Página ===== -->
         <section class="bg-[#002b3e] py-12">
             <div class="container mx-auto px-6 text-center">
@@ -66,7 +92,7 @@
             <div class="container mx-auto px-6 flex flex-wrap md:flex-nowrap items-center gap-8 md:gap-16">
                 <!-- Coluna da Imagem -->
                 <div class="w-full md:w-1/2">
-                    <img src="https://placehold.co/600x600/e2e8f0/334155?text=Imagem+Redes" alt="Certificação de Redes" class="rounded-lg shadow-xl w-full h-full object-cover">
+                    <img src="img/rede_banner.png" alt="Certificação de Redes" class="rounded-lg shadow-xl w-full h-full object-cover">
                 </div>
                 <!-- Coluna de Texto -->
                 <div class="w-full md:w-1/2 text-gray-600">
@@ -100,8 +126,22 @@
         <section class="py-20 bg-gray-100">
             <div class="container mx-auto px-6 text-center">
                 <h2 class="text-2xl font-semibold text-gray-700 mb-8">Confira algumas fotos dos trabalhos realizados em nossos clientes.</h2>
-                <div class="max-w-4xl mx-auto">
-                    <img src="https://placehold.co/1200x600/003a4e/ffffff?text=Galeria+de+Trabalhos" alt="Foto de um trabalho realizado" class="rounded-lg shadow-lg w-full">
+                <!-- Estrutura do Swiper -->
+                <div class="swiper max-w-4xl mx-auto rounded-lg shadow-lg overflow-hidden">
+                    <div class="swiper-wrapper">
+                        <!-- Slides -->
+                        <div class="swiper-slide">
+                            <img src="img/trab_01.png" alt="Foto de um trabalho realizado 1" class="w-full">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="img/trab_02.png" alt="Foto de um trabalho realizado 2" class="w-full">
+                        </div>
+                    </div>
+                    <!-- Setas de Navegação -->
+                    <div class="swiper-button-next"></div>
+                    <div class="swiper-button-prev"></div>
+                    <!-- Paginação (bolinhas) -->
+                    <div class="swiper-pagination"></div>
                 </div>
             </div>
         </section>
@@ -114,12 +154,12 @@
             <nav class="flex justify-center space-x-6 mb-8">
                 <a href="index.html" class="hover:text-cyan-400 transition">Home</a>
                 <a href="quem-somos.html" class="hover:text-cyan-400 transition">Quem somos</a>
-                <a href="servicos.html" class="hover:text-cyan-400 transition">Serviços</a>
+                <a href="clp.html" class="hover:text-cyan-400 transition">Serviços</a>
                 <a href="contato.html" class="hover:text-cyan-400 transition">Contato</a>
             </nav>
             <div class="mb-8">
-                <a href="https://www.instagram.com" target="_blank" class="inline-block">
-                    <svg class="w-7 h-7" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M12.315 2c2.43 0 2.784.013 3.808.06 1.064.049 1.791.218 2.427.465a4.902 4.902 0 012.153 2.153c.247.636.416 1.363.465 2.427.048 1.024.06 1.378.06 3.808s-.012 2.784-.06 3.808c-.049 1.064-.218 1.791-.465 2.427a4.902 4.902 0 01-2.153 2.153c-.636.247-1.363.416-2.427.465-1.024.048-1.378.06-3.808.06s-2.784-.013-3.808-.06c-1.064-.049-1.791-.218-2.427-.465a4.902 4.902 0 01-2.153-2.153c-.247-.636-.416-1.363-.465-2.427-.048-1.024-.06-1.378-.06-3.808s.012-2.784.06-3.808c.049-1.064.218-1.791.465-2.427a4.902 4.902 0 012.153-2.153c.636-.247 1.363-.416 2.427.465C9.53 2.013 9.884 2 12.315 2zM12 8.118c-2.136 0-3.872 1.736-3.872 3.872s1.736 3.872 3.872 3.872 3.872-1.736 3.872-3.872S14.136 8.118 12 8.118zM12 14.354c-1.29 0-2.336-.99-2.336-2.22s1.046-2.336 2.336-2.336 2.336 1.046 2.336 2.336c0 1.23-.99 2.22-2.336 2.22zM16.838 7.846a1.24 1.24 0 100-2.48 1.24 1.24 0 000 2.48z" clip-rule="evenodd" /></svg>
+                <a href="https://www.instagram.com/lasautomation/" target="_blank" class="inline-block text-white/80 hover:text-pink-500 transition">
+                    <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M12 2.25c-2.8 0-3.15.01-4.26.06-1.1.05-1.86.22-2.52.48-.68.27-1.28.63-1.84 1.2-.56.56-.93 1.16-1.2 1.84-.26.66-.43 1.42-.48 2.52C2.01 9.35 2 9.7 2 12.5s.01 3.15.06 4.26c.05 1.1.22 1.86.48 2.52.27.68.63 1.28 1.2 1.84.56.56 1.16.93 1.84 1.2.66.26 1.42.43 2.52.48 1.1.05 1.46.06 4.26.06s3.15-.01 4.26-.06c1.1-.05 1.86-.22 2.52-.48.68-.27 1.28-.63 1.84-1.2.56-.56.93-1.16 1.2-1.84.26-.66.43-1.42.48-2.52.05-1.1.06-1.46.06-4.26s-.01-3.15-.06-4.26c-.05-1.1-.22-1.86-.48-2.52-.27-.68-.63-1.28-1.2-1.84-.56-.56-1.16-.93-1.84-1.2-.66-.26-1.42-.43-2.52-.48C15.65 2.26 15.3 2.25 12.5 2.25h-1zm0 1.62h1c2.7 0 3.04.01 4.1.06.98.04 1.57.2 1.98.36.49.2.82.43 1.18.79.36.36.59.69.79 1.18.16.41.32 1 .36 1.98.05 1.06.06 1.4.06 4.1s-.01 3.04-.06 4.1c-.04.98-.2 1.57-.36 1.98-.2.49-.43.82-.79 1.18-.36.36-.69.59-1.18.79-.41.16-1 .32-1.98.36-1.06.05-1.4.06-4.1.06h-1c-2.7 0-3.04-.01-4.1-.06-.98-.04-1.57-.2-1.98-.36-.49-.2-.82-.43-1.18-.79-.36-.36-.59-.69-.79-1.18-.16-.41-.32-1-.36-1.98-.05-1.06-.06-1.4-.06-4.1h0s.01-3.04.06-4.1c.04-.98.2-1.57.36-1.98.2-.49.43-.82.79-1.18.36-.36.69-.59-1.18-.79.41-.16 1-.32 1.98-.36C8.96 3.88 9.3 3.87 12 3.87h0zm0 3.63c-2.42 0-4.38 1.96-4.38 4.38s1.96 4.38 4.38 4.38 4.38-1.96 4.38-4.38-1.96-4.38-4.38-4.38zm0 7.12c-1.51 0-2.74-1.23-2.74-2.74s1.23-2.74 2.74-2.74 2.74 1.23 2.74 2.74-1.23 2.74-2.74 2.74zm5.33-7.22a1.29 1.29 0 100-2.58 1.29 1.29 0 000 2.58z" clip-rule="evenodd" /></svg>
                 </a>
             </div>
             <div class="text-gray-400 text-sm space-y-2">
@@ -130,27 +170,36 @@
             <p class="text-gray-500 text-xs mt-8">COPYRIGHT © 2024</p>
         </div>
     </footer>
-
+            <!-- ===== Ícone do WhatsApp Fixo ===== -->
+    <a href="https://wa.me/5566996947944" target="_blank" class="fixed bottom-8 right-8 bg-green-500 text-white rounded-full p-4 shadow-lg hover:bg-green-600 transition z-50">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-8 h-8">
+            <path d="M16.6 14.2c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1-.2.2-.6.7-.8.9-.1.1-.3.2-.5.1-.2-.1-.9-.3-1.8-1.1-.7-.6-1.1-1.4-1.3-1.6-.1-.2 0-.4.1-.5.1-.1.2-.2.4-.4.1-.1.2-.2.2-.4.1-.1.1-.3 0-.4-.1-.1-.6-1.4-.8-1.9-.2-.5-.4-.4-.5-.4h-.5c-.2 0-.4.1-.6.3-.2.2-.8.8-.8 1.9s.8 2.2 1 2.4c.1.1 1.5 2.3 3.6 3.2.5.2.8.3 1.1.4.5.1.9.1 1.2.1.4-.1.8-.2 1.1-.4.3-.2.5-.7.7-1.3.1-.6.1-1.1 0-1.2zM12 2a10 10 0 100 20 10 10 0 000-20zm0 18.4c-4.6 0-8.4-3.8-8.4-8.4s3.8-8.4 8.4-8.4 8.4 3.8 8.4 8.4-3.8 8.4-8.4 8.4z"/>
+        </svg>
+    </a>
+        <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <script>
-        // Lógica para o menu mobile e para marcar o link ativo
+        // Lógica para o menu dropdown e menu mobile
+        const servicesBtn = document.getElementById('services-btn');
+        const servicesDropdown = document.getElementById('services-dropdown');
         const mobileBtn = document.getElementById('mobile-btn');
         const mobileMenu = document.getElementById('mobile-menu');
 
-        mobileBtn.addEventListener('click', () => {
-            mobileMenu.classList.toggle('hidden');
+        // Dropdown de Serviços
+        servicesBtn.addEventListener('click', (event) => {
+            event.stopPropagation(); // Impede que o clique se propague para o window
+            servicesDropdown.classList.toggle('hidden');
         });
 
-        // Marca o link da página atual como ativo
-        document.addEventListener('DOMContentLoaded', () => {
-            const links = document.querySelectorAll('.nav-link');
-            const currentPath = window.location.pathname.split('/').pop();
-            
-            links.forEach(link => {
-                const linkPath = link.getAttribute('href').split('/').pop().split('#')[0];
-                if (linkPath === currentPath) {
-                    link.classList.add('active');
-                }
-            });
+        // Esconde o dropdown se clicar fora
+        window.addEventListener('click', () => {
+            if (!servicesDropdown.classList.contains('hidden')) {
+                servicesDropdown.classList.add('hidden');
+            }
+        });
+
+        // Menu Mobile
+        mobileBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
         });
     </script>
 </body>
