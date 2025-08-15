@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="pt-br" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LAS - Smart Automation Solutions</title>
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        /* Estilos personalizados para complementar o Tailwind */
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .header-shadow {
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+        }
+        .services-gradient {
+            background: linear-gradient(to right, #003a4e, #005e7c);
+        }
+        .home-overlay {
+            background: linear-gradient(45deg, rgba(0, 58, 78, 0.85), rgba(0, 163, 224, 0.85));
+        }
+        .dropdown-menu::before {
+            content: '';
+            position: absolute;
+            top: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 0;
+            height: 0;
+            border-left: 10px solid transparent;
+            border-right: 10px solid transparent;
+            border-bottom: 10px solid white;
+            filter: drop-shadow(0 -1px 1px rgba(0,0,0,0.05));
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800">
+
+    <!-- ===== Cabeçalho ===== -->
+    <header id="header" class="bg-white fixed top-0 left-0 right-0 z-50 header-shadow">
+        <div class="container mx-auto px-6 md:px-16 flex justify-between items-center h-24">
+            <!-- Logo -->
+            <a href="index.html">
+                <img src="img/LasLogo.png" alt="Logo da Empresa" class="h-18">
+            </a>
+
+            <!-- Navegação Desktop -->
+            <nav class="hidden md:flex items-center space-x-8">
+                <a href="index.html" class="text-gray-600 hover:text-cyan-500 transition">Home</a>
+                <a href="quem-somos.html" class="text-gray-600 hover:text-cyan-500 transition">Quem somos</a>
+                <div class="relative">
+                    <button id="services-btn" class="text-gray-600 hover:text-cyan-500 transition flex items-center">
+                        Serviços
+                        <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                    </button>
+                    <!-- Menu Dropdown -->
+                    <div id="services-dropdown" class="dropdown-menu absolute hidden bg-white rounded-lg shadow-xl mt-4 py-2 w-60 border border-gray-100">
+                        <a href="clp.html" class="block px-4 py-2 text-gray-700 hover:bg-cyan-50 hover:text-cyan-600">CLP's</a>
+                        <a href="scada.html" class="block px-4 py-2 text-gray-700 hover:bg-cyan-50 hover:text-cyan-600">Sistemas SCADAs</a>
+                        <a href="redes.html" class="block px-4 py-2 text-gray-700 hover:bg-cyan-50 hover:text-cyan-600">Certificações de Redes</a>
+                        <a href="spda.html" class="block px-4 py-2 text-gray-700 hover:bg-cyan-50 hover:text-cyan-600">SPDA</a>
+                        <a href="eletrica.html" class="block px-4 py-2 text-gray-700 hover:bg-cyan-50 hover:text-cyan-600">Soluções Elétricas</a>
+                        <a href="repair.html" class="block px-4 py-2 text-gray-700 hover:bg-cyan-50 hover:text-cyan-600">Service-Repair</a>
+                    </div>
+                </div>
+                <a href="contato.html" class="text-gray-600 hover:text-cyan-500 transition">Contato</a>
+            </nav>
+
+            <!-- Botão Mobile -->
+            <button id="mobile-btn" class="md:hidden">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+            </button>
+        </div>
+        <!-- Menu Mobile -->
+        <div id="mobile-menu" class="hidden md:hidden px-6 pb-4">
+            <a href="index.html" class="block py-2 text-gray-600">Home</a>
+            <a href="quem-somos.html" class="block py-2 text-gray-600">Quem somos</a>
+            <a href="clp.html" class="block py-2 text-gray-600">Serviços</a>
+            <a href="contato.html" class="block py-2 text-gray-600">Contato</a>
+        </div>
+    </header>
+
+    <main class="pt-24">
+        <!-- ===== Secção Home (Banner) ===== -->
+        <section id="home" class="relative h-[595px]">
+            <img src="img/banner.png" alt="banner">
+        </section>
+
+        <!-- ===== Secção "Quem Somos" ===== -->
+        <section id="quem-somos-intro" class="py-16 bg-white">
+            <div class="container mx-auto px-6 text-center">
+                <h2 class="text-3xl font-bold text-cyan-600 mb-4">Somos referência em automação industrial e serviços elétricos</h2>
+                <p class="max-w-3xl mx-auto text-gray-500 text-lg">Modernize seus processos com nossas soluções de automação industrial. Serviços inovadores e eficientes para atender às demandas do mercado. Conte conosco.</p>
+            </div>
+        </section>
+
+        <!-- ===== Secção de Serviços ===== -->
+        <section id="servicos" class="py-20 services-gradient">
+            <div class="container mx-auto px-6 text-center">
+                <h2 class="text-3xl font-bold text-white mb-12">Serviços</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    
+                    <!-- Card de Serviço 1: CLP -->
+                    <div class="bg-white/10 rounded-2xl p-6 flex flex-col text-white text-left border border-white/20">
+                        <div class="rounded-xl mb-6 p-4">
+                            <img src="img/clp_serv.png" alt="Imagem do serviço de CLPs" class="w-full h-auto object-contain">
+                        </div>
+                        <h3 class="text-xl font-bold mb-4">Controle Total com CLPs de Última Geração!</h3>
+                        <ul class="space-y-2 text-white/90 flex-grow">
+                            <li class="flex items-center"><svg class="w-5 h-5 mr-2 text-cyan-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>Programação Customizada</li>
+                            <li class="flex items-center"><svg class="w-5 h-5 mr-2 text-cyan-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>Atualização de Firmware</li>
+                            <li class="flex items-center"><svg class="w-5 h-5 mr-2 text-cyan-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>Integração com Redes</li>
+                            <li class="flex items-center"><svg class="w-5 h-5 mr-2 text-cyan-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>Diagnóstico Remoto</li>
+                        </ul>
+                        <a href="clp.html" class="mt-6 self-center bg-cyan-500 text-white font-bold py-3 px-8 rounded-full hover:bg-cyan-600 transition">Saiba mais</a>
+                    </div>
+
+                    <!-- Card de Serviço 2: SCADA -->
+                    <div class="bg-white/10 rounded-2xl p-6 flex flex-col text-white text-left border border-white/20">
+                        <div class="rounded-xl mb-6 p-4">
+                            <img src="img/scada_serv.png" alt="Imagem do serviço de SCADA" class="w-full h-auto object-contain">
+                        </div>
+                        <h3 class="text-xl font-bold mb-4">Sistemas SCADA: Visualize, Controle, Cresça!</h3>
+                        <ul class="space-y-2 text-white/90 flex-grow">
+                            <li class="flex items-center"><svg class="w-5 h-5 mr-2 text-cyan-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>Desenvolvimento de Interface</li>
+                            <li class="flex items-center"><svg class="w-5 h-5 mr-2 text-cyan-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>Configuração de Alarmes</li>
+                            <li class="flex items-center"><svg class="w-5 h-5 mr-2 text-cyan-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>Histórico e Relatórios</li>
+                            <li class="flex items-center"><svg class="w-5 h-5 mr-2 text-cyan-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>Acesso Remoto Seguro</li>
+                        </ul>
+                        <a href="scada.html" class="mt-6 self-center bg-cyan-500 text-white font-bold py-3 px-8 rounded-full hover:bg-cyan-600 transition">Saiba mais</a>
+                    </div>
+
+                    <!-- Card de Serviço 3: Redes -->
+                    <div class="bg-white/10 rounded-2xl p-6 flex flex-col text-white text-left border border-white/20">
+                        <div class="rounded-xl mb-6 p-4">
+                            <img src="img/redes_serv.png" alt="Imagem do serviço de Redes" class="w-full h-auto object-contain">
+                        </div>
+                        <h3 class="text-xl font-bold mb-4">Certificação de redes: Conectividade sem limites</h3>
+                        <ul class="space-y-2 text-white/90 flex-grow">
+                            <li class="flex items-center"><svg class="w-5 h-5 mr-2 text-cyan-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>Domínio dos Principais Protocolos</li>
+                            <li class="flex items-center"><svg class="w-5 h-5 mr-2 text-cyan-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>Assistência Técnica</li>
+                            <li class="flex items-center"><svg class="w-5 h-5 mr-2 text-cyan-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>Padrões IEC61850</li>
+                            <li class="flex items-center"><svg class="w-5 h-5 mr-2 text-cyan-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>Suporte Técnico Especializado</li>
+                        </ul>
+                        <a href="redes.html" class="mt-6 self-center bg-cyan-500 text-white font-bold py-3 px-8 rounded-full hover:bg-cyan-600 transition">Saiba mais</a>
+                    </div>
+
+                    <!-- Card de Serviço 4: SPDA -->
+                    <div class="bg-white/10 rounded-2xl p-6 flex flex-col text-white text-left border border-white/20">
+                        <div class="rounded-xl mb-6 p-4">
+                            <img src="img/spda_serv.png" alt="Imagem do serviço de SPDA" class="w-full h-auto object-contain">
+                        </div>
+                        <h3 class="text-xl font-bold mb-4">SPDA - Sistema de Proteção contra Descargas Atmosféricas</h3>
+                        <ul class="space-y-2 text-white/90 flex-grow">
+                            <li class="flex items-center"><svg class="w-5 h-5 mr-2 text-cyan-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>Equipamentos Certificados</li>
+                            <li class="flex items-center"><svg class="w-5 h-5 mr-2 text-cyan-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>Máquina Especializada</li>
+                            <li class="flex items-center"><svg class="w-5 h-5 mr-2 text-cyan-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>Aterramentos Diversos</li>
+                            <li class="flex items-center"><svg class="w-5 h-5 mr-2 text-cyan-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>Inspeções Visuais e Completas</li>
+                        </ul>
+                        <a href="spda.html" class="mt-6 self-center bg-cyan-500 text-white font-bold py-3 px-8 rounded-full hover:bg-cyan-600 transition">Saiba mais</a>
+                    </div>
+
+                    <!-- Card de Serviço 5: Elétrica -->
+                    <div class="bg-white/10 rounded-2xl p-6 flex flex-col text-white text-left border border-white/20">
+                        <div class="rounded-xl mb-6 p-4">
+                            <img src="img/eletrica_serv.png" alt="Imagem do serviço de Soluções Elétricas" class="w-full h-auto object-contain">
+                        </div>
+                        <h3 class="text-xl font-bold mb-4">Soluções elétricas sob medida.</h3>
+                        <ul class="space-y-2 text-white/90 flex-grow">
+                            <li class="flex items-center"><svg class="w-5 h-5 mr-2 text-cyan-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>Projetos Personalizados</li>
+                            <li class="flex items-center"><svg class="w-5 h-5 mr-2 text-cyan-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>Montagem de Leitos e Perfilados</li>
+                            <li class="flex items-center"><svg class="w-5 h-5 mr-2 text-cyan-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>Instalação de Ramais</li>
+                            <li class="flex items-center"><svg class="w-5 h-5 mr-2 text-cyan-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>Montagens de Subestações</li>
+                        </ul>
+                        <a href="eletrica.html" class="mt-6 self-center bg-cyan-500 text-white font-bold py-3 px-8 rounded-full hover:bg-cyan-600 transition">Saiba mais</a>
+                    </div>
+
+                    <!-- Card de Serviço 6: Repair -->
+                    <div class="bg-white/10 rounded-2xl p-6 flex flex-col text-white text-left border border-white/20">
+                        <div class="rounded-xl mb-6 p-4">
+                            <img src="img/repair_serv.png" alt="Imagem do serviço de Service-Repair" class="w-full h-auto object-contain">
+                        </div>
+                        <h3 class="text-xl font-bold mb-4">Service-Repair: Inversores, Soft-starter e componentes</h3>
+                        <ul class="space-y-2 text-white/90 flex-grow">
+                            <li class="flex items-center"><svg class="w-5 h-5 mr-2 text-cyan-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>Reparos em Nobreaks</li>
+                            <li class="flex items-center"><svg class="w-5 h-5 mr-2 text-cyan-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>Manutenção Preventiva</li>
+                            <li class="flex items-center"><svg class="w-5 h-5 mr-2 text-cyan-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>Recuperação de Placas</li>
+                            <li class="flex items-center"><svg class="w-5 h-5 mr-2 text-cyan-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>Manutenção em Inversores</li>
+                        </ul>
+                        <a href="repair.html" class="mt-6 self-center bg-cyan-500 text-white font-bold py-3 px-8 rounded-full hover:bg-cyan-600 transition">Saiba mais</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== Secção de Contato ===== -->
+        <section id="contato" class="py-20 bg-gray-100">
+            <div class="container mx-auto px-6 text-center">
+                <h2 class="text-3xl font-bold text-gray-800 mb-4">Fale conosco</h2>
+                <p class="max-w-2xl mx-auto text-gray-600 mb-12">Nossa equipe está disponível para responder suas dúvidas</p>
+                <form class="max-w-4xl mx-auto text-left">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+                        <input type="text" placeholder="Nome" class="w-full p-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-cyan-500">
+                        <input type="email" placeholder="E-mail" class="w-full p-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-cyan-500">
+                        <input type="tel" placeholder="Telefone" class="w-full p-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-cyan-500">
+                        <input type="text" placeholder="Assunto" class="w-full p-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-cyan-500">
+                    </div>
+                    <textarea placeholder="Mensagem" rows="6" class="w-full p-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-cyan-500 mb-6"></textarea>
+                    <div class="text-center">
+                        <button type="submit" class="bg-cyan-500 text-white font-bold py-3 px-12 rounded-lg hover:bg-cyan-600 transition">Enviar</button>
+                    </div>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <!-- ===== Rodapé ===== -->
+    <footer class="bg-[#002b3e] text-white py-12">
+        <div class="container mx-auto px-6 text-center">
+            <nav class="flex justify-center space-x-6 mb-8">
+                <a href="index.html" class="hover:text-cyan-400 transition">Home</a>
+                <a href="quem-somos.html" class="hover:text-cyan-400 transition">Quem somos</a>
+                <a href="clp.html" class="hover:text-cyan-400 transition">Serviços</a>
+                <a href="contato.html" class="hover:text-cyan-400 transition">Contato</a>
+            </nav>
+            <div class="mb-8">
+                <a href="https://www.instagram.com/lasautomation/" target="_blank" class="inline-block text-white/80 hover:text-pink-500 transition">
+                    <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M12 2.25c-2.8 0-3.15.01-4.26.06-1.1.05-1.86.22-2.52.48-.68.27-1.28.63-1.84 1.2-.56.56-.93 1.16-1.2 1.84-.26.66-.43 1.42-.48 2.52C2.01 9.35 2 9.7 2 12.5s.01 3.15.06 4.26c.05 1.1.22 1.86.48 2.52.27.68.63 1.28 1.2 1.84.56.56 1.16.93 1.84 1.2.66.26 1.42.43 2.52.48 1.1.05 1.46.06 4.26.06s3.15-.01 4.26-.06c1.1-.05 1.86-.22 2.52-.48.68-.27 1.28-.63 1.84-1.2.56-.56.93-1.16 1.2-1.84.26-.66.43-1.42.48-2.52.05-1.1.06-1.46.06-4.26s-.01-3.15-.06-4.26c-.05-1.1-.22-1.86-.48-2.52-.27-.68-.63-1.28-1.2-1.84-.56-.56-1.16-.93-1.84-1.2-.66-.26-1.42-.43-2.52-.48C15.65 2.26 15.3 2.25 12.5 2.25h-1zm0 1.62h1c2.7 0 3.04.01 4.1.06.98.04 1.57.2 1.98.36.49.2.82.43 1.18.79.36.36.59.69.79 1.18.16.41.32 1 .36 1.98.05 1.06.06 1.4.06 4.1s-.01 3.04-.06 4.1c-.04.98-.2 1.57-.36 1.98-.2.49-.43.82-.79 1.18-.36.36-.69.59-1.18.79-.41.16-1 .32-1.98.36-1.06.05-1.4.06-4.1.06h-1c-2.7 0-3.04-.01-4.1-.06-.98-.04-1.57-.2-1.98-.36-.49-.2-.82-.43-1.18-.79-.36-.36-.59-.69-.79-1.18-.16-.41-.32-1-.36-1.98-.05-1.06-.06-1.4-.06-4.1h0s.01-3.04.06-4.1c.04-.98.2-1.57.36-1.98.2-.49.43-.82.79-1.18.36-.36.69-.59-1.18-.79.41-.16 1-.32 1.98-.36C8.96 3.88 9.3 3.87 12 3.87h0zm0 3.63c-2.42 0-4.38 1.96-4.38 4.38s1.96 4.38 4.38 4.38 4.38-1.96 4.38-4.38-1.96-4.38-4.38-4.38zm0 7.12c-1.51 0-2.74-1.23-2.74-2.74s1.23-2.74 2.74-2.74 2.74 1.23 2.74 2.74-1.23 2.74-2.74 2.74zm5.33-7.22a1.29 1.29 0 100-2.58 1.29 1.29 0 000 2.58z" clip-rule="evenodd" /></svg>
+                </a>
+            </div>
+            <div class="text-gray-400 text-sm space-y-2">
+                <a href="mailto:gerente@lasautomation.com.br" class="block hover:text-cyan-400">gerente@lasautomation.com.br</a>
+                <p>Atendimento online</p>
+                <a href="tel:+5566996947944" class="block hover:text-cyan-400">+55 (66) 9.9694-7944</a>
+            </div>
+            <p class="text-gray-500 text-xs mt-8">COPYRIGHT © 2024</p>
+        </div>
+    </footer>
+        <!-- ===== Ícone do WhatsApp Fixo ===== -->
+    <a href="https://wa.me/5566996947944" target="_blank" class="fixed bottom-8 right-8 bg-green-500 text-white rounded-full p-4 shadow-lg hover:bg-green-600 transition z-50">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-8 h-8">
+            <path d="M16.6 14.2c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1-.2.2-.6.7-.8.9-.1.1-.3.2-.5.1-.2-.1-.9-.3-1.8-1.1-.7-.6-1.1-1.4-1.3-1.6-.1-.2 0-.4.1-.5.1-.1.2-.2.4-.4.1-.1.2-.2.2-.4.1-.1.1-.3 0-.4-.1-.1-.6-1.4-.8-1.9-.2-.5-.4-.4-.5-.4h-.5c-.2 0-.4.1-.6.3-.2.2-.8.8-.8 1.9s.8 2.2 1 2.4c.1.1 1.5 2.3 3.6 3.2.5.2.8.3 1.1.4.5.1.9.1 1.2.1.4-.1.8-.2 1.1-.4.3-.2.5-.7.7-1.3.1-.6.1-1.1 0-1.2zM12 2a10 10 0 100 20 10 10 0 000-20zm0 18.4c-4.6 0-8.4-3.8-8.4-8.4s3.8-8.4 8.4-8.4 8.4 3.8 8.4 8.4-3.8 8.4-8.4 8.4z"/>
+        </svg>
+    </a>
+
+    <script>
+        // Lógica para o menu dropdown e menu mobile
+        const servicesBtn = document.getElementById('services-btn');
+        const servicesDropdown = document.getElementById('services-dropdown');
+        const mobileBtn = document.getElementById('mobile-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        // Dropdown de Serviços
+        servicesBtn.addEventListener('click', (event) => {
+            event.stopPropagation(); // Impede que o clique se propague para o window
+            servicesDropdown.classList.toggle('hidden');
+        });
+
+        // Esconde o dropdown se clicar fora
+        window.addEventListener('click', () => {
+            if (!servicesDropdown.classList.contains('hidden')) {
+                servicesDropdown.classList.add('hidden');
+            }
+        });
+
+        // Menu Mobile
+        mobileBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+    </script>
+</body>
+</html>
